@@ -32,8 +32,8 @@ python empirical_size_graph.py --DGP "AR1-IID" --lag_set "1" --size_set "100,200
     DGP 7: WN-Bilinear: $\epsilon_{t}=u_{t}+0.5u_{t-1}\epsilon_{t-2}$,
     $u_{t}\sim i.i.d.N(0,1).$
 
-    DGP 8: WN-Gamma : $\epsilon_{t}=u_{t}+u_{t-1}u_{t-2},$ $u_{t}=\zeta
-    _{t}-E[\zeta_{t}],$ $\zeta_{t}\sim i.i.d.Gamma(0.3,0.4)$.
+    DGP 8: WN-Gamma : $\epsilon_{t}=u_{t}+u_{t-1}u_{t-2},$ $u_{t}
+    =\zeta_{t}-E[\zeta_{t}],$ $\zeta_{t}\sim i.i.d.Gamma(0.3,0.4)$.
 
     DGP 9: WN-Gamma2 : $\epsilon_{t}=u_{t}-u_{t-1}u_{t-2},$ $u_{t}
     =\zeta_{t}-E[\zeta_{t}],$ $\zeta_{t}\sim i.i.d.Gamma(0.3,0.4)$.
