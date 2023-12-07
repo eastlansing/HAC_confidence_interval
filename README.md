@@ -2,7 +2,7 @@
 This repository contains Python code for Monte Carlo simulations in "An Estimating Equation Approach for Robust Confidence Intervals for Autocorrelations of Stationary Time Series" by Hwang and Vogelsang (2023). The paper develops heteroskedasticity and autocorrelation (HAC) robust approaches to construct confidence interval for autocorrelations for the time series with general stationary serial correlation structures. The Monte Carlo simulations by the code investigate null rejection probabilities, power and computation of confidence intervals by the extensive simulations regarding autocorrelation function. For comprehensive explanations about the simulation set-up and analysis of the results, please refer to our working paper, available here: [[Paper Link]](https://taeyoonhwang.s3.us-east-2.amazonaws.com/Taeyoon_Hwang_JMP.pdf)
 
 ## Usage
-The codes are packaged to conduct Monte Carlo simulations for different values of interest by single command. For example,
+The codes are packaged to conduct Monte Carlo simulations for different values of interest by a single command. For example,
 
 ```bash
 python empirical_size_graph.py --DGP "AR1-IID" --lag_set "1" --size_set "100,200,500,2000" --phi_set "0.1,0.3,0.5,0.7,0.9,-0.1,-0.3,-0.5,-0.7,-0.9" --replication "1000"
@@ -13,7 +13,7 @@ $y_{t}$ follows the $ARMA(1,1)$ process $y_{t}=\phi y_{t-1}+\epsilon_{t}+\theta\
 
 * Data Generating Processes (DGPs)
 
-    You can choose DGP for Monte Carlo simulation by `--DGP "AR1-IID"`
+    You can choose DGP for Monte Carlo simulation by, for example, `--DGP "AR1-IID"`.
 
     DGP 1: IID : $\epsilon_{t}=u_{t}\sim i.i.d.N(0,1)$.
 
@@ -39,7 +39,7 @@ $y_{t}$ follows the $ARMA(1,1)$ process $y_{t}=\phi y_{t-1}+\epsilon_{t}+\theta\
     DGP 9: WN-Gamma2 : $\epsilon_{t}=u_{t}-u_{t-1}u_{t-2},$ $u_{t}
     =\zeta_{t}-E[\zeta_{t}],$ $\zeta_{t}\sim i.i.d.Gamma(0.3,0.4)$.
 
-    The command for each DGP is provided as follows from DGP 1 to DGP 9. `AR1-IID`, `AR1-MDS`, `AR1-GARCH`, `AR1-WN`, `AR1-non-md1`, `AR1-NLMA`, `AR1-bilinear`, `AR1-WN-gam-v`, `AR1-WN-gam-v-minus`. You  The usage, for example, is `--DGP "AR1-WN-gam-v"`.
+    The command for each DGP is provided as follows from DGP 1 to DGP 9. `AR1-IID`, `AR1-MDS`, `AR1-GARCH`, `AR1-WN`, `AR1-non-md1`, `AR1-NLMA`, `AR1-bilinear`, `AR1-WN-gam-v`, `AR1-WN-gam-v-minus`. The usage, for example, is `--DGP "AR1-WN-gam-v"`. You can replace AR1 by MA1 or ARMA11 to use different ARMA specifications, for example, `ARMA11-NLMA`.
 
  *  `--lag_set` chooses lags of the autocorrelation functions to be considered in the simulation. For example, `--lag_set "1,2,3"` gives the results for the autocorrelation function at lag 1, 2 and 3.
 
