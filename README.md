@@ -8,7 +8,8 @@ The codes are packaged to conduct Monte Carlo simulations for different values o
 python empirical_size_graph.py --DGP "AR1-IID" --lag_set "1" --size_set "100,200,500,2000" --phi_set "0.1,0.3,0.5,0.7,0.9,-0.1,-0.3,-0.5,-0.7,-0.9" --replication "1000"
 ```
 
-* `empirical_size_graph.py` provides the simulation results that compare null rejections of our approach with that of existing methods. As you can see in the paper, we include existing methods such as Bartlett formula by Bartlett (1946), Taylor $t$-statistic by Taylor (1984) and Dalla, Giraitis and Phillips (2022), generalized Bartlett formula by Francq and Zakoian (2009). Under our estimating equation apporach, we have various versions of test statistics based on different asymptotics. The traditional approach yields $t$-statistics based on kernel HAC variance estimator with normal critical values. Under fixed-$b$ asymptotics, it is based on kernel HAC variance estimator with fixed-$b$ critical values. Under fixed-K asymptotics we use orthonormal series variance estimator suggested by Sun (2013).
+* `empirical_size_graph.py` provides the simulation results that compare null rejections of our approach with that of existing methods, under a broad set of data generating processes (DGPs) where
+$y_{t}$ follows the $ARMA(1,1)$ process $y_{t}=\phi y_{t-1}+\epsilon_{t}+\theta\epsilon_{t-1}$ and $\epsilon_t$ is innovation and can be defined as below. As you can see in the paper, we include existing methods such as Bartlett formula by Bartlett (1946), Taylor $t$-statistic by Taylor (1984) and Dalla, Giraitis and Phillips (2022), generalized Bartlett formula by Francq and Zakoian (2009). Under our estimating equation apporach, we have various versions of test statistics based on different asymptotics. The traditional approach yields $t$-statistics based on kernel HAC variance estimator with normal critical values. Under fixed-$b$ asymptotics, it is based on kernel HAC variance estimator with fixed-$b$ critical values. Under fixed-K asymptotics we use orthonormal series variance estimator suggested by Sun (2013).
 
 * Data Generating Processes (DGPs)
 
@@ -38,6 +39,7 @@ python empirical_size_graph.py --DGP "AR1-IID" --lag_set "1" --size_set "100,200
     DGP 9: WN-Gamma2 : $\epsilon_{t}=u_{t}-u_{t-1}u_{t-2},$ $u_{t}
     =\zeta_{t}-E[\zeta_{t}],$ $\zeta_{t}\sim i.i.d.Gamma(0.3,0.4)$.
 
+    The command for each DGP is provided as follows from DGP 1 to DGP 9. `AR1-IID`, `AR1-MDS`, `AR1-GARCH`, `AR1-WN`, `AR1-non-md1`, `AR1-NLMA`, `AR1-bilinear`, `AR1-WN-gam-v`, `AR1-WN-gam-v-minus`.
 
 
 
