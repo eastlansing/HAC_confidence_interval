@@ -39,7 +39,7 @@ $y_{t}$ follows the $ARMA(1,1)$ process $y_{t}=\phi y_{t-1}+\epsilon_{t}+\theta\
     DGP 9: WN-Gamma2 : $\epsilon_{t}=u_{t}-u_{t-1}u_{t-2},$ $u_{t}
     =\zeta_{t}-E[\zeta_{t}],$ $\zeta_{t}\sim i.i.d.Gamma(0.3,0.4)$.
 
-    The command for each DGP is provided as follows from DGP 1 to DGP 9. `AR1-IID`, `AR1-MDS`, `AR1-GARCH`, `AR1-WN`, `AR1-non-md1`, `AR1-NLMA`, `AR1-bilinear`, `AR1-WN-gam-v`, `AR1-WN-gam-v-minus`.
+    The command for each DGP is provided as follows from DGP 1 to DGP 9. `AR1-IID`, `AR1-MDS`, `AR1-GARCH`, `AR1-WN`, `AR1-non-md1`, `AR1-NLMA`, `AR1-bilinear`, `AR1-WN-gam-v`, `AR1-WN-gam-v-minus`. The usage, for example, is `--DGP "AR1-WN-gam-v"`
 
 
 
